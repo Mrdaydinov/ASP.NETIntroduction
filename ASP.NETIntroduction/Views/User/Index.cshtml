@@ -1,0 +1,30 @@
+﻿<h2> User controller</h2>
+<table class="table">
+    <thead>
+        <tr>
+            <th scope="col">#</th>
+            <th scope="col">Name</th>
+            <th scope="col">Surname</th>
+            <th scope="col">Age</th>
+            <th scope="col">Country</th>
+            <th scope="col">PhoneNumber</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <th scope="row">1</th>
+            <td>@ViewData["Name"]</td>
+            <td>@ViewData["SurName"]</td>
+            <td>@ViewData["Age"]</td>
+            <td>@ViewData["Country"]</td>
+            <td>@ViewData["PhoneNumber"]</td>
+        </tr>
+        <tr>
+            <th scope="row">2</th>
+            @for (int i = 0; i < ViewBag.DataRowList.Count; i++)
+            {
+                <td>@ViewBag.DataRowList[i]</td>
+            }
+        </tr>
+    </tbody>
+</table>
